@@ -30,7 +30,8 @@ const routes = [{
     method : 'GET',
     path: '/hello/{name?}',
     handler: (request, h) => {
-
+        const { name = "stranger" } = request.params;
+        return `Hello, ${name}!`;
     }
 },
 {
