@@ -21,6 +21,20 @@ const routes = [{
 },
 {
     method: '*',
+    path: '/about',
+    handler: (request, h) => {
+        return 'Halaman about tidak dapat diakses dengan method tersebut';
+    }
+},
+{
+    method : 'GET',
+    path: '/hello/{name?}',
+    handler: (request, h) => {
+
+    }
+},
+{
+    method: '*',
     path: '/{any*}',
     handler: (request, h) => {
         return 'Halaman tidak ditemukan';
